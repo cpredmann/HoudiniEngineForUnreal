@@ -37,7 +37,7 @@
 class FText;
 class AActor;
 class UObject;
-class FAssetData;
+struct FAssetData;
 
 
 UCLASS( config = Editor )

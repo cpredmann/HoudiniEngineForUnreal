@@ -2449,7 +2449,7 @@ FHoudiniEngineUtils::HapiCreateInputNodeForData(
                 if ( !LandscapeComponent )
                     continue;
 
-                FBoxSphereBounds WorldBounds = LandscapeComponent->CalcBounds( LandscapeComponent->ComponentToWorld );
+                FBoxSphereBounds WorldBounds = LandscapeComponent->CalcBounds( LandscapeComponent->GetComponentTransform() );
 
                 if ( AssetBounds.IntersectXY( WorldBounds.GetBox() ) )
                     SelectedComponents.Add( LandscapeComponent );
